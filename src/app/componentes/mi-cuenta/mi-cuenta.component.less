@@ -1,0 +1,74 @@
+#container {
+    margin: 1%;
+    display: grid;
+    width: 99%;
+    height: 250px;
+    grid-template-areas: 
+      'header main'
+      'footer footer';
+    grid-template-columns: 25% 74%;
+    grid-template-rows: 650px auto;
+}
+#cabecera{
+    grid-area: header;
+    background-color: #ffffff;
+    border: 4px solid #e4e4e4;
+    overflow: auto;
+}
+#principal{
+    grid-area: main;
+    background-color: #ffffff;
+    border-top: 4px solid #e4e4e4;
+    border-right: 4px solid #e4e4e4;
+    border-bottom: 4px solid #e4e4e4;
+    //border: 4px solid #e4e4e4;
+    overflow: auto;
+}
+#pie{
+    margin: -1%;
+    grid-area: footer;
+}
+
+.perfil{
+    text-align: center;
+}
+
+#img{
+    width: 200px;
+    margin: 5%;
+    //border: 5px solid #8d8d8d;
+}
+
+.ppal{
+    border-bottom: 3px solid #8d8d8d;
+}
+
+#pts{
+    margin-left: 20%;
+}
+
+.menu{
+    ul{
+        padding: 0;
+        list-style: none;
+        li{
+            text-decoration: none;
+            padding: 0;
+            margin: 0;
+            a{
+                padding: 15px;
+                color: #000000;
+                display: block;
+            }
+            a:hover{
+                color: #292929;
+                text-decoration: none;
+                background-color: rgba(0, 0, 0, 0.1);
+            }
+        }
+    }
+}
+
+.hCompra{
+    padding: 100px;
+}

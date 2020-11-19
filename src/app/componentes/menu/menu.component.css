@@ -1,0 +1,80 @@
+#OfertaDespacho {
+  background: #D0D0D0;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+#letra {
+  font-family: 'Secular One', sans-serif;
+}
+.navegacion {
+  background: #000000;
+  text-align: center;
+}
+.navegacion ul {
+  list-style: none;
+}
+.menu > li {
+  display: inline-block;
+}
+.menu > li > a {
+  display: block;
+  padding: 15px 20px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.menu li a:hover {
+  color: #37fcd1;
+  transition: all 0.3s;
+}
+.submenu {
+  position: absolute;
+  background: #000000;
+  display: none;
+  z-index: 1000;
+}
+.submenu li a {
+  display: block;
+  padding: 20px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.menu li:hover .submenu {
+  display: block;
+}
+#btn-menu {
+  display: none;
+}
+.navegacion label {
+  display: none;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+}
+.navegacion label:hover {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 789px) {
+  .navegacion label {
+    display: block;
+    height: 50px;
+  }
+  .menu {
+    background: #000000;
+    width: 50%;
+    margin-left: -50%;
+    transition: all 0.5s;
+    position: absolute;
+    z-index: 1000;
+  }
+  .menu ul {
+    flex-direction: column;
+  }
+  .menu ul li a {
+    color: #FFFFFF;
+  }
+  #btn-menu:checked ~ .menu {
+    margin: 0px;
+  }
+}
