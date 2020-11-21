@@ -1,0 +1,22 @@
+<div class="col-12 mb-3 mt-3 pl-1"> <!-- me ocupa todo el largo del componente, p(izquierda y derecha)-->
+    <div class="row bg-light">
+     <div class="card mb-3" style="max-width: 540px;">
+         <div class="row no-gutters">
+           <div class="col-md-4">
+             <img src="{{producto.imagen}}" class="card-img" alt="...">
+           </div>
+           <div class="col-md-8">
+             <div class="card-body">
+               <h5 class="card-title">{{producto.producto}}</h5>
+               <p class="card-text">{{producto.descripcion}}</p>
+             </div>
+           </div>
+         </div>
+     </div>
+         <div class="col-3"> {{producto.precio | currency: 'CLP '}}</div>
+         <div class="product-actions cantidad_70946">
+             <input class="cantidad qtd_to_sku fired" type="number" value="0" minlength="1" max="99">
+         </div>
+        <div class="col-2 text-right">{{producto.subtotalProducto | currency: 'CLP '}}</div>
+    </div>
+ </div>
