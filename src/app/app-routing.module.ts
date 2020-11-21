@@ -9,21 +9,22 @@ import { FormRegistroComponent } from './componentes/form-registro/form-registro
 import { SeguimientoPedidoComponent } from './componentes/seguimiento-pedido/seguimiento-pedido.component';
 import { ProductoComponent } from './componentes/producto/producto.component';
 import { MiCuentaComponent } from './componentes/mi-cuenta/mi-cuenta.component';
+import { CarroCompraComponent } from './componentes/carro-compra/carro-compra.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: IndexComponent
+    component: IndexComponent,
+    pathMatch: 'full',
   },
   {
     path: 'InfoRegistro',
     component: InfoRegistroComponent,
-    pathMatch: 'full'
   },
   {
     path: 'login',
     component: LoginComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path:'formRegistro',
@@ -41,6 +42,14 @@ const routes: Routes = [
   {
     path: 'MiCuenta',
     component: MiCuentaComponent
+  },
+  {
+    path: '**',
+    component: IndexComponent
+  },
+  {
+    path: 'carro-compra',
+    component:CarroCompraComponent
   }
 ]; 
 

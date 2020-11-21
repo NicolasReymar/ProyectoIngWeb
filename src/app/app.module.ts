@@ -13,6 +13,9 @@ import { SeguimientoPedidoComponent } from './componentes/seguimiento-pedido/seg
 import { ProductoComponent } from './componentes/producto/producto.component';
 import { NotFoundComponent } from './componentes/not-found/not-found.component';
 import { MiCuentaComponent } from './componentes/mi-cuenta/mi-cuenta.component';
+import { CarroCompraComponent } from './componentes/carro-compra/carro-compra.component';
+import { ProductoCardComponent } from './componentes/producto-card/producto-card.component';
+import { ProductosCarroComponent } from './componentes/productos-carro/productos-carro.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +30,9 @@ import { MiCuentaComponent } from './componentes/mi-cuenta/mi-cuenta.component';
     ProductoComponent,
     NotFoundComponent,
     MiCuentaComponent,
+    CarroCompraComponent,
+    ProductoCardComponent,
+    ProductosCarroComponent,
   ],
   imports: [
     BrowserModule,
