@@ -17,4 +17,6 @@ export class ProductoCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
+
 }

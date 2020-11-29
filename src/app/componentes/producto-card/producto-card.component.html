@@ -14,9 +14,15 @@
          </div>
      </div>
          <div class="col-3"> {{producto.precio | currency: 'CLP '}}</div>
-         <div class="product-actions cantidad_70946">
-             <input class="cantidad qtd_to_sku fired" type="number" value="0" minlength="1" max="99">
-         </div>
-        <div class="col-2 text-right">{{producto.subtotalProducto | currency: 'CLP '}}</div>
+            <td class="product-quantity" data-title="Cantidad">    
+                <div class="quantity buttons_added">
+                  <input type="button" value="-" class="minus" id="myBtn2" onclick="contador--;myFunction()">
+                  <label class="screen-reader-text" for="quantity_5fb960424961d"></label>
+                  <input type="number" id="myText" class="input-text qty text" step="1" min="0" max="99" name="cart[fc33073cb57bd68d6df31b8c97c91e93][qty]" value="1" title="Cantidad" size="4" placeholder="" inputmode="numeric">
+                  <input type="button" value="+" class="plus" id="myBtn" onclick="contador++;myFunction()">
+
+                  
+                </div>
+            </td>
     </div>
  </div>

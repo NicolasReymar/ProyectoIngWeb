@@ -44,12 +44,9 @@ const routes: Routes = [
     component: MiCuentaComponent
   },
   {
-    path: '**',
-    component: IndexComponent
-  },
-  {
-    path: 'carro-compra',
-    component:CarroCompraComponent
+    path: 'carrocompra',
+    component:CarroCompraComponent,
+    pathMatch: 'full'
   }
 ]; 
 
