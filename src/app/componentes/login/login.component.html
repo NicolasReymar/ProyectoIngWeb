@@ -2,28 +2,152 @@
 
 <div id="bloque">
     <div class="container">
-        <form>
+        <!--la clase para acceder desde css y el id para acceder desde js-->
+        <form action="" class="formulario" id="formulario">
             <div class="titulo">
                 Iniciar Sesión
             </div>
-            <div class="form-group">
-                <label for="exampleInputEmail1">Nombre de Usuario o Correo electronico</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                <small id="emailHelp" class="form-text text-muted">Correo Electronico Privado</small>
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Contraseña</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
-                <div class="text-center">
-                    <a href="">&iquest;Olvid&oacute; su contrase&ntilde;a?</a>
+            <!--Grupo correo-->
+            <div class="formulario__grupo" id="grupo__correo">
+                <label for="correo" class="formulario__label">Correo electronico</label>
+                <div class="formulario__grupo-input">
+                    <input type="email" class="formulario__input" name="correo" id="correo" placeholder="ingrese su correo">
+                    <div class="formulario__estado-validacion">
+                        <svg width="1.3em" height="1.3em" viewBox="0 0 16 16" class="bi bi-x-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                        </svg>
+                    </div>
                 </div>
+                <p class="formulario__input-error">Ingrese un usuario valido</p>
             </div>
-            <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">haz click aquí</label>
+            <!--Grupo password-->
+            <div class="formulario__grupo" id="grupo__password">
+                <label for="password" class="formulario__label">Constraseña</label>
+                <div class="formulario__grupo-input">
+                    <input type="password" class="formulario__input" name="password" id="password" placeholder="ingrese su contraseña">
+                    <div class="formulario__estado-validacion">
+                        <svg width="1.3em" height="1.3em" viewBox="0 0 16 16" class="bi bi-x-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                        </svg>
+                    </div>
+                </div>
+                <p class="formulario__input-error">Ingrese un usuario valido</p>
             </div>
-            <a class="btn" [routerLink]="['/MiCuenta']" routerLinkActive="router-link-active" >Iniciar Sesión</a>
+            <!--Grupo: terminos y condiciones-->
+            <div class="formulario__grupo-terminos" id="grupo__terminos">
+                <label class="formulario__label">
+                    <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+                    Acepto los terminos y condiciones.
+                </label>
+            </div>
+
+            <div class="formulario__mensaje" id="formulario__mensaje">
+                <p>
+                    <svg width="1.0625em" height="1em" viewBox="0 0 17 16" class="bi bi-exclamation-triangle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 5zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                    </svg>
+                    <b>ERROR:</b> Por favor rellenar el formulario correctamente.
+                </p>
+            </div>
+
+            <!--Grupo boton enviar-->
+            <div class="formulario__grupo formulario__grupo-boton-enviar">
+                <button type="submit" class="btn formulario__btn">Enviar</button>
+                <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Ha ingresado!</p>
+            </div>
+            
+            <h4>Tambien puedes ingresar a traves de:</h4>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6"> <a href="#" class="btn-facebook btn-primary facebook"> <span>Ingresar con Facebook</span> <i class="fa fa-facebook"></i> </a> </div>
+                <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6"> <a href="#" class="btn-google btn-primary google-plus"> Ingresar con Google <i class="fa fa-google-plus"></i> </a> </div>
+            </div>
+
+
         </form>
+        <style>
+            .row{
+                margin-top: 10%;
+            }
+            .formulario__label{
+                cursor: pointer;
+            }
+            .formulario__grupo-input{
+                position: relative;
+            }
+            .formulario__input{
+                width: 100%;
+                background: #ffffff;
+                border: 3px solid transparent;
+                border-radius: 3px;
+                height: 45px;
+                line-height: 45px;
+                transition: .3s ease all;
+            }
+            .formulario__input:focus{
+                border: 3px solid #D0D0D0;
+                outline: none;
+            }
+            .formulario__input-error{
+                font-size: 12px;
+                margin-bottom: 0p;
+                display: none;
+            }
+            .formulario__input-error-activo{
+                display: block;
+            }
+            .formulario__estado-validacion{
+                position: absolute;
+                right: 10px;
+                top: 5px;
+                z-index: 100;
+                opacity: 0;
+            }
+            .formulario__checkbox{
+                margin-right: 10px;
+            }
+            .formulario__mensaje{
+                height: 45px;
+                line-height: 45px;
+                background: #F66868;
+                padding: 0 15px;
+                border-radius: 3px;
+                display: none;
+            }
+            .formulario__mensaje-activo{
+                display: block;
+            }
+            .formulario__mensaj p{
+                margin: 0;
+            }
+            .formulario__grupo-boton-enviar{
+                flex-direction: column;
+                align-items: center;
+            }
+            .formulario__mensaje-exito{
+                font-size: 14px;
+                color: #119200;
+                display: none;
+            }
+            .formulario__mensaje-exito-avtivo{
+                display: block;
+            }
+            .formulario__grupo-correcto .formulario__estado-validacion{
+                color: #1ed12d;
+                opacity: 1;
+            }
+            .formulario__grupo-incorrecto .formulario__label{
+                color: #bb2929;
+            }
+            .formulario__grupo-incorrecto .formulario__estado-validacion{
+                color: #bb2929;
+                opacity: 1;
+            }
+            .formulario__grupo-incorrecto .formulario__input{
+                border: 3px solid #bb2929;
+            }
+        </style>
     </div>
 </div>
+
+<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 <app-pie-pagina></app-pie-pagina>

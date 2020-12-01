@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { from, generate } from 'rxjs';
 
 @Component({
   selector: 'app-form-registro',
